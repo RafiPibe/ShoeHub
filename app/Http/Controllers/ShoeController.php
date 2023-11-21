@@ -25,7 +25,7 @@ class ShoeController extends Controller
         $shoe = Shoe::all();
         $outlet = Outlet::all();
 
-        return view('shoe.show', ['shoe' => $gems]);
+        return view('shoe.show', ['shoe' => $shoe]);
     }
 
     public function imageToBase64($imagePath) {

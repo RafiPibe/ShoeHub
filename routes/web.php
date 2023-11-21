@@ -1,7 +1,11 @@
 <?php
 
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\ShoeController;
+use App\Http\Controllers\OutletController;
+
 use Illuminate\Support\Facades\Route;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -29,20 +33,20 @@ Route::middleware('auth')->group(function () {
 });
 
 Route::middleware('auth')->group(function () {
-    Route::get('/form', [ShoeController::class, 'index'])->name('form.index');
-    Route::post('/form', [ShoeController::class, 'store'])->name('form.store');
-    Route::get('/show', [ShoeController::class, 'show'])->name('form.show');
+    Route::get('/shoe', [ShoeController::class, 'index'])->name('shoe.index');
+    Route::post('/shoe', [ShoeController::class, 'store'])->name('shoe.store');
+    Route::get('/show', [ShoeController::class, 'show'])->name('shoe.show');
 });
 
 Route::middleware('auth')->group(function () {
-    Route::get('/outlet/create', [outletController::class, 'store'])->name('outlet.store');
+    Route::get('/outlet/create', [OutletController::class, 'store'])->name('outlet.store');
     Route::view('/outlet', 'outlet.index')->name('outlet.index');
-    Route::get('/outlet', [outletController::class, 'show'])->name('outlet.index');
-    Route::post('/outlet', [outletController::class, 'store'])->name('files.store');
+    Route::get('/outlet', [OutletController::class, 'show'])->name('outlet.index');
+    Route::post('/outlet', [OutletController::class, 'store'])->name('files.store');
 
-    Route::get('/outlet/create', [outletController::class, 'upload'])->name('upload');
-    Route::get('/outlet', [outletController::class, 'index'])->name('outlet.index');
-    Route::post('/outlet', [outletController::class, 'store'])->name('outlet.store');
+    Route::get('/outlet/create', [OutletController::class, 'upload'])->name('upload');
+    Route::get('/outlet', [OutletController::class, 'index'])->name('outlet.index');
+    Route::post('/outlet', [OutletController::class, 'store'])->name('outlet.store');
 });
 
 require __DIR__.'/auth.php';
