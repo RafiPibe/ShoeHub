@@ -1,10 +1,10 @@
 <x-app-layout>
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 dark:text-gray-200 leading-tight">
-            {{ __('Lab Informations') }}
+            {{ __('Outlet Informations') }}
         </h2>
         <div class="d-flex mx-5 my-5 justify-content-center text-xs dark:text-gray-200">
-            <a href="/mines/create" class="btn btn-info mx-5" style="max-width: 18rem;">+Add Lab</a>
+            <a href="/mines/create" class="btn btn-info mx-5" style="max-width: 18rem;">+Add Outlet</a>
         </div>
     </x-slot>
 
