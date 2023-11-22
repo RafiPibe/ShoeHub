@@ -9,7 +9,7 @@ use App\Models\Outlet;
 class ShoeController extends Controller
 {
     public function index() {
-        $shoe = Shoe::all();
+        $shoe = Shoes::all();
         $outlet = Outlet::all();
 
         return view('shoe.index', ['shoe' => $shoe, 'outlet' => $outlet]);
@@ -22,7 +22,7 @@ class ShoeController extends Controller
     }
 
     public function show() {
-        $shoe = Shoe::all();
+        $shoe = Shoes::all();
         $outlet = Outlet::all();
 
         return view('shoe.show', ['shoe' => $shoe]);

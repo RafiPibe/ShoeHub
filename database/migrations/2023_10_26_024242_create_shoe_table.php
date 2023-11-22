@@ -10,7 +10,7 @@ return new class extends Migration
      * Run the migrations.
      */
     public function up() {
-        Schema::create('shoe', function (Blueprint $table) {
+        Schema::create('shoes', function (Blueprint $table) {
             $table->id();
             $table->string('shoeName');
             $table->enum('shoeSize', ['30', '31', '32', '33', '34', '35', '36', '37', '38', '39', '40', '41', '42', '43', '44', '45', '46', '47', '48', '49', '50']);
@@ -26,6 +26,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('shoe');
+        Schema::dropIfExists('shoes');
     }
 };
