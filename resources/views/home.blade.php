@@ -35,9 +35,9 @@
                 <h1>Welcome to ShoeHub,</h1>
                 <p>Discover the latest trends in footwear</p>
                 <div class="flex flex-col items-center justify-center mt-4">
-                    <x-primary-button class="mb-3">
+                    <a class="mb-3" href="{{ route('login') }}">
                         {{ __('Shop Now!') }}
-                    </x-primary-button>
+                    </a>
                 </div>
             </div>
     </body>
