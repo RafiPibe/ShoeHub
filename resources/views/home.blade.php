@@ -138,8 +138,8 @@ footer {
     <header>
         <nav>
             <ul>
-                <li><a href="{{ route('login') }}">Login</a></li>
-                <li><a href="{{ route('register') }}">Register</a></li>
+                <li><a href="{{ route('login') }}">Sign In</a></li>
+                <li><a href="{{ route('register') }}">Join Us</a></li>
             </ul>
         </nav>
     </header>
@@ -147,7 +147,7 @@ footer {
     <section class="hero">
         <h1>Welcome to ShoeHub</h1>
         <p>Discover the latest trends in footwear</p>
-        <a href="#shop-now" class="cta-button">Shop Now</a>
+        <a href="/show" class="cta-button">Shop Now</a>
     </section>
 
     <section id="shop-now" class="products">
