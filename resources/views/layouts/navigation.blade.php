@@ -17,12 +17,6 @@
                     </x-nav-link>
 
                     <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
-                        <x-nav-link :href="route('shoe.index')" :active="request()->routeIs('shoe.index')">
-                            {{ __('Add Shoe') }}
-                        </x-nav-link>
-                    </div>
-
-                    <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
                         <x-nav-link :href="route('shoe.show')" :active="request()->routeIs('shoe.show')">
                             {{ __('Shoe Catalogue') }}
                         </x-nav-link>
@@ -33,6 +27,19 @@
                             {{ __('Outlets') }}
                         </x-nav-link>
                     </div>
+
+                    <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
+                        {{-- <x-nav-link :href="route('shoe.index')" :active="request()->routeIs('shoe.index')">
+                            {{ __('Add Shoe') }}
+                        </x-nav-link> --}}
+
+                        @if(auth()->user()->isAdmin)
+                            <x-nav-link :href="route('shoe.index')" :active="request()->routeIs('shoe.index')">
+                                {{ __('Add Shoe') }}
+                            </x-nav-link>
+                        @endif
+                    </div>
+
                 </div>
             </div>
 
