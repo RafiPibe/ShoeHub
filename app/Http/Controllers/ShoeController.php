@@ -47,13 +47,13 @@ class ShoeController extends Controller
     {
         $request->validate([
             'shoeName' => 'required|string',
-            'rating' => 'required',
+            // 'rating' => 'required',
             'shoeSize' => 'required|integer',
             // 'outlet_id' => 'required',
             'shoeImage' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048',
         ], [
             'shoeName.required' => 'Shoe name can\'t be empty!',
-            'rating.required' => 'Rating can\'t be empty!',
+            // 'rating.required' => 'Rating can\'t be empty!',
             'shoeSize.required' => 'Shoe Size can\'t be empty!',
             // 'outlet_id.required' => 'outlet can\'t be empty!',
             'shoeImage.required' => 'Image can\'t be empty!',
@@ -72,6 +72,7 @@ class ShoeController extends Controller
             'shoeName' => $request->shoeName,
             'shoeSize' => $request->shoeSize,
             // 'outlet_id' => $request->outlet_id,
+            'outletId' => 1,
             'shoeImage' => $imageBase64
         ]);
 

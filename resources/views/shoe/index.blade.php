@@ -23,29 +23,29 @@
                             {{-- Shoe Size --}}
                             <div class="mt-4">
                                 <x-input-label for="shoeSize" :value="__('Shoe Size')" />
-                                <x-select-input id="shoeSize" class="block mt-1 w-full" name="shoeSize" :value="old('Shoe Size')" required autofocus autocomplete="shoeSize">
+                                <x-select-input id="shoeSize" class="block mt-1 w-full" name="shoeSize" :value="old('ShoeSize')" required autofocus autocomplete="shoeSize">
                                     <option selected value="">-</option>
-                                    <option value="30"></option>
-                                    <option value="31"></option>
-                                    <option value="32"></option>
-                                    <option value="33"></option>
-                                    <option value="34"></option>
-                                    <option value="35"></option>
-                                    <option value="36"></option>
-                                    <option value="37"></option>
-                                    <option value="38"></option>
-                                    <option value="39"></option>
-                                    <option value="40"></option>
-                                    <option value="41"></option>
-                                    <option value="42"></option>
-                                    <option value="43"></option>
-                                    <option value="44"></option>
-                                    <option value="45"></option>
-                                    <option value="46"></option>
-                                    <option value="47"></option>
-                                    <option value="48"></option>
-                                    <option value="49"></option>
-                                    <option value="50"></option>
+                                    <option value="30">30</option>
+                                    <option value="31">31</option>
+                                    <option value="32">32</option>
+                                    <option value="33">33</option>
+                                    <option value="34">34</option>
+                                    <option value="35">35</option>
+                                    <option value="36">36</option>
+                                    <option value="37">37</option>
+                                    <option value="38">38</option>
+                                    <option value="39">39</option>
+                                    <option value="40">40</option>
+                                    <option value="41">41</option>
+                                    <option value="42">42</option>
+                                    <option value="43">43</option>
+                                    <option value="44">44</option>
+                                    <option value="45">45</option>
+                                    <option value="46">46</option>
+                                    <option value="47">47</option>
+                                    <option value="48">48</option>
+                                    <option value="49">49</option>
+                                    <option value="50">50</option>
                                 </x-select-input>
                                 <x-input-error :messages="$errors->get('shoeSize')" class="mt-2" />
                             </div>

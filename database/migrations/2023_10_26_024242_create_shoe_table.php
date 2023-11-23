@@ -12,10 +12,10 @@ return new class extends Migration
     public function up() {
         Schema::create('shoes', function (Blueprint $table) {
             $table->id();
-            $table->string('shoeName');
-            $table->enum('shoeSize', ['30', '31', '32', '33', '34', '35', '36', '37', '38', '39', '40', '41', '42', '43', '44', '45', '46', '47', '48', '49', '50']);
-            $table->string('Outlet_id')->constrained()->nullable();
-            $table->longText('shoeImage');
+            $table->string('shoeName')->nullable();
+            $table->enum('shoeSize', ['30', '31', '32', '33', '34', '35', '36', '37', '38', '39', '40', '41', '42', '43', '44', '45', '46', '47', '48', '49', '50'])->nullable();
+            $table->string('outletId')->constrained()->nullable();
+            $table->longText('shoeImage')->nullable();
             $table->timestamps();
         });
 
