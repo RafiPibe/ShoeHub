@@ -15,6 +15,11 @@ class ShoeController extends Controller
         return view('shoe.index', ['shoe' => $shoe, 'outlet' => $outlet]);
     }
 
+    public function previewindex() {
+        $shoes = Shoe::take(3)->get();
+        return view('home', compact('shoes'));
+    }
+
     public function create()
     {
         $outlet = Outlet::all();

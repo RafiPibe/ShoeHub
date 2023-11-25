@@ -10,3 +10,14 @@
 
 <p>Our Previous Work:</p>
 https://github.com/RafiPibe/LaravelFramework-PBKK
+
+To do list:
+```
+- Shopping Cart
+
+- "Add to cart" button for each shoe
+
+- Automatically send confirmation of purchase email once purchase is made (Job)
+
+- Item pricing
+```
