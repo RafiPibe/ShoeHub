@@ -55,6 +55,7 @@ Route::middleware('auth')->group(function () {
     Route::post('/outlet', [OutletController::class, 'store'])->name('outlet.store');
 });
 
+// Route::get('/userCart', [UserCartController::class, 'store'])->name('userCart.store');
 Route::post('/userCart', [UserCartController::class, 'store'])->name('userCart.store');
 
 require __DIR__.'/auth.php';
