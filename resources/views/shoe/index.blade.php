@@ -64,13 +64,20 @@
 
                             {{-- Image --}}
                             <div class="mt-4 flex flex-col">
-                                <label for="shoeImage" class="form-label form-dark bg-dark color-dark text-white">Upload Image</label>
+                                <x-input-label for="shoeImage" class="form-label form-dark bg-dark color-dark text-white">Upload Image</x-input-label>
                                 <input class="btn-dark form-control form-dark bg-dark color-dark text-white" type="file" id="image" name="shoeImage">
                                 @error('shoeImage')
                                     <div class="alert alert-danger">
                                         {{ $message }}
                                     </div>
                                 @enderror
+                            </div>
+
+                            {{-- Price --}}
+                            <div class="mt-4">
+                                <x-input-label for="shoePrice" :value="__('Shoe Price')" />
+                                <x-text-input id="shoePrice" class="block mt-1 w-full" type="number" step="0.01" name="shoePrice" :value="old('shoePrice')" required autofocus autocomplete="shoePrice" />
+                                <x-input-error :messages="$errors->get('shoePrice')" class="mt-2" />
                             </div>
 
                             <div class="flex justify-center mb-4">

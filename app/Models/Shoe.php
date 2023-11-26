@@ -14,5 +14,6 @@ class Shoe extends Model
         'shoeSize',
         'outletId',
         'shoeImage',
+        'shoePrice',
     ];
 }

@@ -61,12 +61,14 @@ class ShoeController extends Controller
             'shoeSize' => 'required|integer',
             // 'outlet_id' => 'required',
             'shoeImage' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048',
+            'shoePrice' => 'required|numeric',
         ], [
             'shoeName.required' => 'Shoe name can\'t be empty!',
             // 'rating.required' => 'Rating can\'t be empty!',
             'shoeSize.required' => 'Shoe Size can\'t be empty!',
             // 'outlet_id.required' => 'outlet can\'t be empty!',
             'shoeImage.required' => 'Image can\'t be empty!',
+            'shoePrice.required' => 'Price can\'t be empty!',
         ]);
 
         $image = $request->file('shoeImage');
@@ -83,7 +85,8 @@ class ShoeController extends Controller
             'shoeSize' => $request->shoeSize,
             // 'outlet_id' => $request->outlet_id,
             'outletId' => 1,
-            'shoeImage' => $imageBase64
+            'shoeImage' => $imageBase64,
+            'shoePrice' => $request->shoePrice,
         ]);
 
         return redirect('/show');
