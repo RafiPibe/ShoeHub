@@ -4,8 +4,9 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class UserCartsTable extends Migration
+return new class extends Migration
 {
+
     public function up()
     {
         Schema::create('user_carts', function (Blueprint $table) {
@@ -20,4 +21,6 @@ class UserCartsTable extends Migration
     {
         Schema::dropIfExists('user_carts');
     }
-}
+
+
+};
