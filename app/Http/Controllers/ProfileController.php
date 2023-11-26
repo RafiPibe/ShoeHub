@@ -37,7 +37,7 @@ class ProfileController extends Controller
     //     return Redirect::route('profile.edit')->with('status', 'profile-updated');
     // }
 
-    // Updated update function to inlude shoeSize
+    // Updated update function to include shoeSize
     public function update(ProfileUpdateRequest $request): RedirectResponse
     {
         $validatedData = $request->validated();

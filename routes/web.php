@@ -40,6 +40,7 @@ Route::middleware('auth')->group(function () {
     Route::get('/shoe', [ShoeController::class, 'index'])->name('shoe.index');
     Route::post('/shoe', [ShoeController::class, 'store'])->name('shoe.store');
     Route::get('/show', [ShoeController::class, 'show'])->name('shoe.show');
+    Route::get('/shoe/{id}', [ShoeController::class, 'details'])->name('shoe.details');
 });
 
 Route::middleware('auth')->group(function () {

@@ -33,6 +33,11 @@ class ShoeController extends Controller
         return view('shoe.show', ['shoe' => $shoe]);
     }
 
+    public function details($id) {
+        $shoe = Shoe::find($id);
+        return view('shoe.details', ['shoe' => $shoe]);
+    }
+
     public function imageToBase64($imagePath) {
         try {
             $imageData = file_get_contents($imagePath);
