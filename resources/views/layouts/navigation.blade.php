@@ -18,15 +18,15 @@
 
                     <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
                         <x-nav-link :href="route('shoe.show')" :active="request()->routeIs('shoe.show')">
-                            {{ __('Shoe Catalogue') }}
+                            {{ __('SNKRS') }}
                         </x-nav-link>
                     </div>
 
-                    <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
+                    {{-- <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
                         <x-nav-link :href="route('outlet.index')" :active="request()->routeIs('outlet.index')">
                             {{ __('Outlets') }}
                         </x-nav-link>
-                    </div>
+                    </div> --}}
 
                     <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
                         {{-- <x-nav-link :href="route('shoe.index')" :active="request()->routeIs('shoe.index')">
@@ -45,6 +45,20 @@
 
             <!-- Settings Dropdown -->
             <div class="hidden sm:flex sm:items-center sm:ml-6">
+                <div class="flex items-center space-x-4 justify-end">
+                    <form class="flex items-center">
+                        <input type="text" class="rounded-md" placeholder="Search...">
+                        <button type="submit" class="ml-2">Search</button>
+                    </form>
+                    <x-nav-link :href="route('shoe.index')" :active="request()->routeIs('shoe.index')">
+                        {{ __('Cart') }}
+                    </x-nav-link>
+                    <x-nav-link :href="route('shoe.index')" :active="request()->routeIs('shoe.index')">
+                        {{ __('Favourites') }}
+                    </x-nav-link>
+                    {{-- <a href="/">Cart</a>
+                    <a href="/">Favourites</a> --}}
+                </div>
                 <x-dropdown align="right" width="48">
                     <x-slot name="trigger">
                         <button class="inline-flex items-center px-3 py-2 border border-transparent text-sm leading-4 font-medium rounded-md text-gray-500 dark:text-gray-400 bg-white dark:bg-gray-800 hover:text-gray-700 dark:hover:text-gray-300 focus:outline-none transition ease-in-out duration-150">

@@ -3,6 +3,7 @@
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\ShoeController;
 use App\Http\Controllers\OutletController;
+use App\Http\Controllers\UserCartController;
 
 use Illuminate\Support\Facades\Route;
 
@@ -53,5 +54,7 @@ Route::middleware('auth')->group(function () {
     Route::get('/outlet', [OutletController::class, 'index'])->name('outlet.index');
     Route::post('/outlet', [OutletController::class, 'store'])->name('outlet.store');
 });
+
+Route::post('/userCart', [UserCartController::class, 'store'])->name('userCart.store');
 
 require __DIR__.'/auth.php';
