@@ -14,11 +14,12 @@
                     <h3>Size: {{ $shoe->shoeSize }}</h3>
                     <h3>Price: ${{ $shoe->shoePrice}}</h3>
                     <div class="mt-4">
-                        <x-secondary-button>
-                            {{ __('Favourite') }}
-                        </x-secondary-button>
+
                         <form action="{{ route('userCart.store') }}" method="POST">
                             @csrf
+                            <x-secondary-button>
+                                {{ __('Favourite') }}
+                            </x-secondary-button>
                             <input type="hidden" name="shoeId" value="{{ $shoe->id }}">
                             <x-primary-button class="ml-4">
                                 {{ __('Add to Cart') }}
