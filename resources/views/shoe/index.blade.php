@@ -1,13 +1,13 @@
 <x-app-layout>
     <x-slot name="header">
-        <h2 class="font-semibold text-xl text-gray-800 dark:text-gray-200 leading-tight">
+        <h2 class="font-semibold text-xl text-gray-800 leading-tight">
             {{ __('Form') }}
         </h2>
     </x-slot>
 
     <div class="py-12">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-            <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg">
+            <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
                 <div class="form-container">
                     <form action="{{ route('shoe.store') }}" method="post" enctype="multipart/form-data">
                         @csrf
@@ -64,7 +64,7 @@
 
                             {{-- Image --}}
                             <div class="mt-4 flex flex-col">
-                                <x-input-label for="shoeImage" class="form-label form-dark bg-dark color-dark text-white">Upload Image</x-input-label>
+                                <x-input-label for="shoeImage" class="form-label form-dark bg-dark color-dark text-black">Upload Image</x-input-label>
                                 <input class="btn-dark form-control form-dark bg-dark color-dark text-white" type="file" id="image" name="shoeImage">
                                 @error('shoeImage')
                                     <div class="alert alert-danger">
