@@ -45,10 +45,15 @@
             <!-- Settings Dropdown -->
             <div class="hidden sm:flex sm:items-center sm:ml-6">
                 <div class="flex items-center space-x-4 justify-end p-2">
-                        <form class="flex items-center">
-                            <input type="text" class="rounded-md" placeholder="Search...">
-                            <button type="submit" class="ml-2">Search</button>
-                        </form>
+                    <div class="flex items-center">
+                        <div class="relative">
+                            <svg class="absolute top-3 left-3 h-5 w-5 text-gray-400" viewBox="0 0 24 24" stroke="currentColor">
+                                <path xmlns="http://www.w3.org/2000/svg" d="M484.1,454.796l-110.5-110.6c29.8-36.3,47.6-82.8,47.6-133.4c0-116.3-94.3-210.6-210.6-210.6S0,94.496,0,210.796   s94.3,210.6,210.6,210.6c50.8,0,97.4-18,133.8-48l110.5,110.5c12.9,11.8,25,4.2,29.2,0C492.5,475.596,492.5,463.096,484.1,454.796z    M41.1,210.796c0-93.6,75.9-169.5,169.5-169.5s169.6,75.9,169.6,169.5s-75.9,169.5-169.5,169.5S41.1,304.396,41.1,210.796z"/>
+                            </svg>
+                            <input type="text" class="rounded-md pl-10" placeholder="Search...">
+                        </div>
+                        <button type="submit" class="ml-2">Search</button>
+                    </div>
                     <x-nav-link :href="route('shoe.index')" :active="request()->routeIs('shoe.index')">
                         {{ __('Cart') }}
                     </x-nav-link>
