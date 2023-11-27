@@ -80,7 +80,14 @@
                                 <x-input-error :messages="$errors->get('shoePrice')" class="mt-2" />
                             </div>
 
-                            <div class="flex justify-center mb-4">
+                            {{-- Description --}}
+                            <div class="mt-4">
+                                <x-input-label for="shoeDescription" :value="__('Description')" />
+                                <x-text-input id="shoeDescription" class="block mt-1 w-full" type="text" name="shoeDescription" :value="old('shoeDescription')" required autofocus autocomplete="shoeDescription" />
+                                <x-input-error :messages="$errors->get('shoeDescription')" class="mt-2" />
+                            </div>
+
+                            <div class="flex justify-center mt-4 mb-4">
                                 <x-primary-button class="mx-auto">
                                     {{ __('Submit') }}
                                 </x-primary-button>

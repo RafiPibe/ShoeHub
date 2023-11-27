@@ -69,6 +69,7 @@ class ShoeController extends Controller
             // 'outlet_id.required' => 'outlet can\'t be empty!',
             'shoeImage.required' => 'Image can\'t be empty!',
             'shoePrice.required' => 'Price can\'t be empty!',
+            'shoeDescription.required' => 'Description can\'t be empty!',
         ]);
 
         $image = $request->file('shoeImage');
@@ -87,6 +88,7 @@ class ShoeController extends Controller
             'outletId' => 1,
             'shoeImage' => $imageBase64,
             'shoePrice' => $request->shoePrice,
+            'shoeDescription' => $request->shoeDescription,
         ]);
 
         return redirect('/show');

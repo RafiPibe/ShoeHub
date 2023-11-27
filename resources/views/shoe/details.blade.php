@@ -20,6 +20,7 @@
                         <h1 class="veryBigText">{{ $shoe->shoeName }}</h1>
                         <p class="text-s">Size: {{ $shoe->shoeSize }}</p>
                         <p class="text-s">Price: ${{ $shoe->shoePrice}}</p>
+                        <p class="text-s">{{ $shoe->shoeDescription}}</p>
                     </div>
 
                     <div class="mt-4">

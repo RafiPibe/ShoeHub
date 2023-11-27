@@ -17,6 +17,7 @@ return new class extends Migration
             $table->float('shoePrice')->nullable();
             $table->string('outletId')->constrained()->nullable();
             $table->longText('shoeImage')->nullable();
+            $table->longText('shoeDescription')->nullable();
             $table->timestamps();
         });
 
