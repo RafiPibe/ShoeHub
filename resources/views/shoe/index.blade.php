@@ -64,7 +64,7 @@
 
                             {{-- Image --}}
                             <div class="mt-4 flex flex-col">
-                                <x-input-label for="shoeImage" class="form-label form-dark bg-dark color-dark text-black">Upload Image</x-input-label>
+                                <x-input-label for="shoeImage" class="form-label form-dark bg-dark color-dark text-black">Upload Shoe Image</x-input-label>
                                 <input class="btn-dark form-control form-dark bg-dark color-dark text-white" type="file" id="image" name="shoeImage">
                                 @error('shoeImage')
                                     <div class="alert alert-danger">
