@@ -54,7 +54,7 @@
                         </div>
                         <button type="submit" class="ml-2">Search</button>
                     </div>
-                    <x-nav-link :href="route('shoe.index')" :active="request()->routeIs('shoe.index')">
+                    <x-nav-link :href="route('cart')" :active="request()->routeIs('cart')">
                         {{ __('Cart') }}
                     </x-nav-link>
                     <x-nav-link :href="route('shoe.index')" :active="request()->routeIs('shoe.index')">

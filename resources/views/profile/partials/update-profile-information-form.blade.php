@@ -50,9 +50,9 @@
         <div>
             <x-input-label for="shoeSize" :value="__('Shoe Size')" />
             <x-select-input id="shoeSize" class="block mt-1 w-full" name="shoeSize" :value="old('shoeSize', $user->shoeSize)" required autofocus autocomplete="shoeSize">
-                <option selected value="">-</option>
+                <option value="">-</option>
                 @foreach(range(30, 50) as $size)
-                    <option value="{{ $size }}">{{ $size }}</option>
+                    <option value="{{ $size }}" {{ old('shoeSize', $user->shoeSize) == $size ? 'selected' : '' }}>{{ $size }}</option>
                 @endforeach
             </x-select-input>
             <x-input-error class="mt-2" :messages="$errors->get('shoeSize')" />
