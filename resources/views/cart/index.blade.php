@@ -27,11 +27,11 @@
                         </div>
                     </div>
                 </a>
-            @empty
-                <div class="p-6 text-gray-900 bg-white overflow-hidden shadow-sm sm:rounded-lg flex flex-row w-full h-screen/4 my-4 relative" style="height: 9vh;">
-                    <p>Your cart is empty</p>
-                </div>
-            @endforelse
+                @empty
+                    <div class="p-6 text-gray-900 bg-white overflow-hidden shadow-sm sm:rounded-lg flex flex-row w-full h-screen/4 my-4 relative" style="height: 9vh;">
+                        <p>Your cart is empty</p>
+                    </div>
+                @endforelse
         </div>
         <div class="w-1/4">
             <div class="p-6 text-gray-900">
@@ -48,12 +48,16 @@
                     <hr style="border-top: 1px solid #000;">
                     <div>
                         <p>Total: ${{ $total }}</p><br>
-                        <form action="" method="POST">
-                            @csrf
-                            <x-primary-button type="submit">
-                                {{ __('Proceed to Checkout') }}
-                            </x-primary-button>
-                        </form>
+                        @if(count($cartItems) > 0)
+                            <form action="{{ route('checkout') }}" method="GET">
+                                @csrf
+                                <x-primary-button type="submit">
+                                    {{ __('Proceed to Checkout') }}
+                                </x-primary-button>
+                            </form>
+                        @else
+                            <p>Your cart is empty</p>
+                        @endif
                     </div>
                 </div>
             </div>
