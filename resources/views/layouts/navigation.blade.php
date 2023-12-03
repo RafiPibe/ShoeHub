@@ -54,11 +54,11 @@
                         </div>
                         <button type="submit" class="ml-2">Search</button>
                     </div>
-                    <x-nav-link :href="route('cart')" :active="request()->routeIs('cart')">
-                        {{ __('Cart') }}
-                    </x-nav-link>
                     <x-nav-link :href="route('favourites.show')" :active="request()->routeIs('favourites.show')">
                         {{ __('Favourites') }}
+                    </x-nav-link>
+                    <x-nav-link :href="route('cart')" :active="request()->routeIs('cart')">
+                        {{ __('Cart') }}
                     </x-nav-link>
                     {{-- <a href="/">Cart</a>
                     <a href="/">Favourites</a> --}}

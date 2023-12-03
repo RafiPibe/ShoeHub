@@ -28,7 +28,9 @@
                     </div>
                 </a>
             @empty
-                <p>Your cart is empty</p>
+                <div class="p-6 text-gray-900 bg-white overflow-hidden shadow-sm sm:rounded-lg flex flex-row w-full h-screen/4 my-4 relative" style="height: 9vh;">
+                    <p>Your cart is empty</p>
+                </div>
             @endforelse
         </div>
         <div class="w-1/4">
