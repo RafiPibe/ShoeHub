@@ -57,19 +57,12 @@ Route::middleware('auth')->group(function () {
     Route::post('/outlet', [OutletController::class, 'store'])->name('outlet.store');
 });
 
-// Route::get('/userCart', [UserCartController::class, 'store'])->name('userCart.store');
 Route::post('/userCart', [UserCartController::class, 'store'])->name('userCart.store');
-
 Route::get('/cart', [UserCartController::class, 'showCart'])->name('cart');
 Route::delete('/cart/{id}', [UserCartController::class, 'remove'])->name('cart.remove');
 
 Route::post('/userFav', [UserFavouriteController::class, 'store'])->name('userFav.store');
 Route::get('/favourites', [UserFavouriteController::class, 'showFav'])->name('favourites.show');
-
-
-// Route::get('/checkout', function () {
-//     return view('checkout.index');
-// })->name('checkout.index');
 
 Route::get('/checkout', [UserCheckoutController::class, 'showItems'])->name('checkout');
 

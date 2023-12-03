@@ -6,7 +6,7 @@
     </x-slot>
 
     <div class="max-w-7xl mx-auto sm:px-6 lg:px-8 flex">
-        <div class="w-3/4">
+        <div class="w-2/3">
                 @forelse($cartItems as $item)
                 <a href="{{ route('shoe.details', $item->shoe->id) }}">
                     <div class="p-6 text-gray-900 bg-white overflow-hidden shadow-sm sm:rounded-lg flex flex-row w-full h-screen/4 my-4 relative" style="height: 20vh;">
@@ -33,8 +33,8 @@
                     </div>
                 @endforelse
         </div>
-        <div class="w-1/4">
-            <div class="p-6 text-gray-900">
+        <div class="w-1/3">
+            <div class="p-4 text-gray-900">
                 <div class="p-6 text-gray-900 bg-white overflow-hidden shadow-sm sm:rounded-lg flex flex-col">
                     <h2 class="font-semibold text-xl text-gray-800 leading-tight">
                         {{ __('Summary') }}

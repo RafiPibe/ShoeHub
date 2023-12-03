@@ -38,7 +38,7 @@
             </div>
         </div>
         <div class="w-1/3">
-            <div class="p-6 text-gray-900">
+            <div class="p-4 text-gray-900">
                 <div class="p-6 text-gray-900 bg-white overflow-hidden shadow-sm sm:rounded-lg flex flex-col">
                     <h2 class="font-semibold text-xl text-gray-800 leading-tight">
                         {{ __('Summary') }}
