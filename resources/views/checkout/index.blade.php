@@ -51,7 +51,7 @@
                     <br>
                     <hr style="border-top: 1px solid #000;">
                     <div>
-                        <p>Total: ${{ $total }}</p><br>
+                        <p>Total: ${{ $total }}</p>
                     </div>
                 </div>
                 @foreach($cartItems as $item)

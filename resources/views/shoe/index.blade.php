@@ -1,7 +1,7 @@
 <x-app-layout>
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-            {{ __('Form') }}
+            {{ __('Shoe Form') }}
         </h2>
     </x-slot>
 
@@ -11,7 +11,7 @@
                 <div class="form-container">
                     <form action="{{ route('shoe.store') }}" method="post" enctype="multipart/form-data">
                         @csrf
-                        <x-input-label for="name" :value="__('Shoe Form')" />
+                        <x-input-label for="name" :value="__('')" />
 
                             {{-- Shoe Name --}}
                             <div class="mt-4">
