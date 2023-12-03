@@ -11,14 +11,22 @@ class UserFavouriteController extends Controller
 {
     public function store(Request $request)
     {
-        $userId = auth()->id(); // Get current user's ID
+        $userId = auth()->id();
+        $shoeId = $request->input("shoeId");
 
-        UserFav::create([
-            'user_id' => $userId,
-            'shoe_id' => $request->input("shoeId")
-        ]);
+        $existingFavorite = UserFav::where('user_id', $userId)
+            ->where('shoe_id', $shoeId)
+            ->first();
 
-        return redirect()->back()->with('message', 'Shoe added to favourites successfully!');
+        if (!$existingFavorite) {
+            UserFav::create([
+                'user_id' => $userId,
+                'shoe_id' => $shoeId
+            ]);
+            return redirect()->back()->with('message', 'Shoe added to favourites successfully!');
+        } else {
+            return redirect()->back()->with('message', 'Shoe is already in favourites!');
+        }
     }
 
     public function showFav()

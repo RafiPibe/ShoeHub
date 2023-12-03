@@ -14,7 +14,8 @@
                         <div class="flex flex-col mx-4">
                             <div>
                                 <a> {{ $item->shoe->shoeName }}</a><br>
-                                <a>Size: {{ $item->shoe->shoeSize }}</a>
+                                <a>Size: {{ $item->shoe->shoeSize }}</a><br>
+                                <a>Price: ${{ $item->shoe->shoePrice }}</a>
                             </div>
                             <form action="{{ route('cart.remove', $item->id) }}" method="POST" class="absolute bottom-4 right-4">
                                 @csrf
@@ -41,8 +42,16 @@
                             <p>{{ $item->shoe->shoeName }} - ${{ $item->shoe->shoePrice }}</p>
                         </div>
                     @endforeach
+                    <br>
+                    <hr style="border-top: 1px solid #000;">
                     <div>
-                        <p>Total: ${{ $total }}</p>
+                        <p>Total: ${{ $total }}</p><br>
+                        <form action="" method="POST">
+                            @csrf
+                            <x-primary-button type="submit">
+                                {{ __('Proceed to Checkout') }}
+                            </x-primary-button>
+                        </form>
                     </div>
                 </div>
             </div>
