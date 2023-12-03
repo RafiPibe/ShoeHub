@@ -57,7 +57,7 @@
                     <x-nav-link :href="route('cart')" :active="request()->routeIs('cart')">
                         {{ __('Cart') }}
                     </x-nav-link>
-                    <x-nav-link :href="route('shoe.index')" :active="request()->routeIs('shoe.index')">
+                    <x-nav-link :href="route('favourites.show')" :active="request()->routeIs('favourites.show')">
                         {{ __('Favourites') }}
                     </x-nav-link>
                     {{-- <a href="/">Cart</a>

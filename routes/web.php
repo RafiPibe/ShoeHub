@@ -4,6 +4,7 @@ use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\ShoeController;
 use App\Http\Controllers\OutletController;
 use App\Http\Controllers\UserCartController;
+use App\Http\Controllers\UserFavouriteController;
 
 use Illuminate\Support\Facades\Route;
 
@@ -59,5 +60,10 @@ Route::middleware('auth')->group(function () {
 Route::post('/userCart', [UserCartController::class, 'store'])->name('userCart.store');
 Route::get('/cart', [UserCartController::class, 'showCart'])->name('cart');
 Route::delete('/cart/{id}', [UserCartController::class, 'remove'])->name('cart.remove');
+
+Route::post('/userFav', [UserFavouriteController::class, 'store'])->name('userFav.store');
+// Route::get('/favourites', [UserFavouriteController::class, 'show'])->name('favourites.show');
+Route::get('/favourites', [UserFavouriteController::class, 'showFav'])->name('favourites.show');
+
 
 require __DIR__.'/auth.php';

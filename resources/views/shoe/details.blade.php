@@ -23,12 +23,17 @@
                         <p class="text-s">{{ $shoe->shoeDescription}}</p>
                     </div>
 
-                    <div class="mt-4">
-                        <form action="{{ route('userCart.store') }}" method="POST">
+                    <div class="mt-4 flex">
+                        <form action="{{ route('userFav.store') }}" method="POST">
                             @csrf
-                            <x-secondary-button>
+                            <input type="hidden" name="shoeId" value="{{ $shoe->id }}">
+                            <x-secondary-button type="submit">
                                 {{ __('Add to Favourites') }}
                             </x-secondary-button>
+                        </form>
+
+                        <form action="{{ route('userCart.store') }}" method="POST">
+                            @csrf
                             <input type="hidden" name="shoeId" value="{{ $shoe->id }}">
                             <x-primary-button class="ml-4">
                                 {{ __('Add to Cart') }}
