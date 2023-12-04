@@ -50,18 +50,6 @@
                                 <x-input-error :messages="$errors->get('shoeSize')" class="mt-2" />
                             </div>
 
-                            {{-- Mines --}}
-                            {{-- <div class="mt-4">
-                                <x-input-label for="minesId" :value="__('minesId')" />
-                                <x-select-input id="minesId" class="block mt-1 w-full" name="minesId" :value="old('minesId')" required autofocus autocomplete="minesId">
-                                    <option selected value="">-</option>
-                                    @foreach ($mines as $mines)
-                                        <option value="{{$mines->id}}">{{$mines->name}}</option>
-                                    @endforeach
-                                </x-select-input>
-                                <x-input-error :messages="$errors->get('minesId')" class="mt-2" />
-                            </div> --}}
-
                             {{-- Image --}}
                             <div class="mt-4 flex flex-col">
                                 <x-input-label for="shoeImage" class="form-label form-dark bg-dark color-dark text-black">Upload Shoe Image</x-input-label>
