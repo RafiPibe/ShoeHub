@@ -5,7 +5,7 @@
         </h2>
     </x-slot>
 
-    <div class="max-w-7xl mx-auto sm:px-6 lg:px-8 flex flex-wrap py-2">
+    <div class="max-w-7xl mx-auto sm:px-6 lg:px-8 flex flex-wrap py-6">
     <x-dropdown align="left" width="48">
         <x-slot name="trigger">
             <button class="inline-flex items-center px-3 py-2 border border-black text-sm leading-4 font-medium rounded-md text-black dark:text-black bg-white hover:text-black focus:outline-none transition ease-in-out duration-150">
@@ -28,19 +28,25 @@
 
     <div class="py-2">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8 flex flex-wrap">
-            @foreach ($shoe as $shoe)
-            <a href="{{ route('shoe.details', $shoe->id) }}">
-                <div class="p-6 text-gray-900 bg-white overflow-hidden shadow-sm sm:rounded-lg flex flex-col w-1/5">
-                    <img src="data:image/png;base64, {{ $shoe->shoeImage }}" alt="shoe Image" class="max-w-full">
-                    <a> {{ $shoe->shoeName }}</a>
-                    <a>Price: ${{ $shoe->shoePrice }}</a>
-                </div>
-            </a>
+            @forelse ($shoe as $shoe)
+                <a href="{{ route('shoe.details', $shoe->id) }}">
+                    <div class="p-6 text-gray-900 bg-white overflow-hidden shadow-sm sm:rounded-lg flex flex-col w-1/5">
+                        <img src="data:image/png;base64, {{ $shoe->shoeImage }}" alt="shoe Image" class="max-w-full">
+                        <a> {{ $shoe->shoeName }}</a>
+                        <a>Size: EU{{ $shoe->shoeSize}}</a>
+                        <a>Price: ${{ $shoe->shoePrice }}</a>
+                    </div>
+                </a>
 
-            <div class="p-6 text-gray-900">
-                {{ __("") }}
-            </div>
-            @endforeach
+                <div class="p-6 text-gray-900">
+                    {{ __("") }}
+                </div>
+
+                @empty
+                    <div class="p-6 text-gray-900 bg-white overflow-hidden shadow-sm sm:rounded-lg flex flex-row w-full h-screen/4 my-4 relative" style="height: 9vh;">
+                        <p>Sorry there aren't any shoes of that size available</p>
+                    </div>
+            @endforelse
         </div>
     </div>
 </x-app-layout>
