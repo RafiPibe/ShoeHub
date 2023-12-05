@@ -25,4 +25,6 @@ To do list:
 - Admin / Customer Service chat (live broadcasting)
 
 - Seeder for admin [isAdmin = 1]
+
+- Home / welcome page
 ```
