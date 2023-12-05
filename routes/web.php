@@ -6,6 +6,7 @@ use App\Http\Controllers\OutletController;
 use App\Http\Controllers\UserCartController;
 use App\Http\Controllers\UserFavouriteController;
 use App\Http\Controllers\UserCheckoutController;
+use App\Http\Controllers\EmailSendingController;
 
 use Illuminate\Support\Facades\Route;
 
@@ -67,5 +68,6 @@ Route::get('/favourites', [UserFavouriteController::class, 'showFav'])->name('fa
 Route::delete('/userFav/{id}', [UserFavouriteController::class, 'remove'])->name('userFav.remove');
 
 Route::get('/checkout', [UserCheckoutController::class, 'showItems'])->name('checkout');
+Route::post('/checkout', [UserCheckoutController::class, 'processCheckout'])->name('checkout.process');Route::post('/send-email-on-continue', [EmailSendingController::class, 'sendEmailOnContinue'])->name('send-email-on-continue');
 
 require __DIR__.'/auth.php';

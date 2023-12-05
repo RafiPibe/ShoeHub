@@ -63,9 +63,16 @@
                         <x-input-label for="cvv" :value="__('CVV')" />
                         <x-text-input id="cvv" class="block mt-1 w-full" type="text" name="cvv" required />
                     </div>
+                </form>
+
+                    {{-- <x-primary-button type="submit" class="mt-4">
+                        {{ __('Continue') }}
+                    </x-primary-button> --}}
+                <form method="POST" action="{{ route('send-email-on-continue') }}">
+                    @csrf
                     <x-primary-button type="submit" class="mt-4">
                         {{ __('Continue') }}
-                            </x-primary-button>
+                    </x-primary-button>
                 </form>
             </div>
         </div>
