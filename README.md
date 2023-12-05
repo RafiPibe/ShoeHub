@@ -13,11 +13,16 @@ https://github.com/RafiPibe/LaravelFramework-PBKK
 
 To do list:
 ```
-- Shopping Cart
+✅ Shopping Cart
 
-- "Add to cart" button for each shoe
+✅ "Add to cart" button for each shoe
 
-- Automatically send confirmation of purchase email once purchase is made (Job)
+✅ Automatically send confirmation of purchase email once purchase is made (Job)
+    - Needs Checkout information [ongoing]
 
-- Item pricing
+✅ Item pricing
+
+- Admin / Customer Service chat (live broadcasting)
+
+- Seeder for admin [isAdmin = 1]
 ```
