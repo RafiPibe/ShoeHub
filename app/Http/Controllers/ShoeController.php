@@ -26,9 +26,21 @@ class ShoeController extends Controller
         return view('shoe.index', compact('outlet'));
     }
 
-    public function show() {
-        $shoe = Shoe::all();
-        $outlet = Outlet::all();
+    // public function show() {
+    //     $shoe = Shoe::all();
+    //     $outlet = Outlet::all();
+
+    //     return view('shoe.show', ['shoe' => $shoe]);
+    // }
+
+    public function show(Request $request)
+    {
+        $size = $request->input('size');
+        if ($size && $size !== 'all') {
+            $shoe = Shoe::where('shoeSize', $size)->get();
+        } else {
+            $shoe = Shoe::all();
+        }
 
         return view('shoe.show', ['shoe' => $shoe]);
     }
