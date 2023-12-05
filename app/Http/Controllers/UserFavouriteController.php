@@ -42,4 +42,10 @@ class UserFavouriteController extends Controller
     //     return $this->belongsTo(Shoe::class);
     // }
 
+    public function remove($id)
+    {
+        UserFav::destroy($id);
+        return redirect()->back()->with('message', 'Item removed from favourites successfully!');
+    }
+
 }

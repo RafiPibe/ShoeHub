@@ -63,6 +63,7 @@ Route::delete('/cart/{id}', [UserCartController::class, 'remove'])->name('cart.r
 
 Route::post('/userFav', [UserFavouriteController::class, 'store'])->name('userFav.store');
 Route::get('/favourites', [UserFavouriteController::class, 'showFav'])->name('favourites.show');
+Route::delete('/userFav/{id}', [UserFavouriteController::class, 'remove'])->name('userFav.remove');
 
 Route::get('/checkout', [UserCheckoutController::class, 'showItems'])->name('checkout');
 

@@ -13,6 +13,13 @@
                     <img src="data:image/png;base64, {{ $favourite->shoe->shoeImage }}" alt="shoe Image" class="max-w-full">
                     <a> {{ $favourite->shoe->shoeName }}</a>
                     <a>Price: ${{ $favourite->shoe->shoePrice }}</a>
+                    <form action="{{ route('userFav.remove', $favourite->id) }}" method="POST">
+                        @csrf
+                        @method('DELETE')
+                        <x-secondary-button type="submit">
+                            {{ __('remove') }}
+                        </x-secondary-button>
+                    </form>
                 </div>
             </a>
 

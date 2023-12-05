@@ -30,7 +30,7 @@
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8 flex flex-wrap">
             @forelse ($shoe as $shoe)
                 <a href="{{ route('shoe.details', $shoe->id) }}">
-                    <div class="p-6 text-gray-900 bg-white overflow-hidden shadow-sm sm:rounded-lg flex flex-col w-1/5">
+                    <div class="p-6 text-gray-900 bg-white overflow-hidden shadow-sm sm:rounded-lg flex flex-col w-1/5 mb-4">
                         <img src="data:image/png;base64, {{ $shoe->shoeImage }}" alt="shoe Image" class="max-w-full">
                         <a> {{ $shoe->shoeName }}</a>
                         <a>Size: EU{{ $shoe->shoeSize}}</a>
@@ -49,4 +49,5 @@
             @endforelse
         </div>
     </div>
+
 </x-app-layout>
