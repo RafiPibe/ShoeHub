@@ -44,6 +44,7 @@ Route::middleware('auth')->group(function () {
     Route::post('/shoe', [ShoeController::class, 'store'])->name('shoe.store');
     Route::get('/show', [ShoeController::class, 'show'])->name('shoe.show');
     Route::get('/shoe/{id}', [ShoeController::class, 'details'])->name('shoe.details');
+    Route::delete('/shoe/{id}', [ShoeController::class, 'remove'])->name('shoe.remove');
 });
 
 Route::middleware('auth')->group(function () {

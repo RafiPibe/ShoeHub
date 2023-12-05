@@ -29,14 +29,25 @@
     <div class="py-2">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8 flex flex-wrap">
             @forelse ($shoe as $shoe)
-                <a href="{{ route('shoe.details', $shoe->id) }}">
-                    <div class="p-6 text-gray-900 bg-white overflow-hidden shadow-sm sm:rounded-lg flex flex-col w-1/5 mb-4">
+                <div class="p-6 text-gray-900 bg-white overflow-hidden shadow-sm sm:rounded-lg flex flex-col w-1/5 mb-4 relative">
+                    <form method="POST" action="{{ route('shoe.remove', $shoe->id) }}">
+                        @if(auth()->user()->isAdmin)
+                            @csrf
+                            @method('DELETE')
+                            <button type="submit" class="absolute top-2 right-2 text-red-500 hover:text-red-700">
+                                <svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                                </svg>
+                            </button>
+                        @endif
+                    </form>
+                    <a href="{{ route('shoe.details', $shoe->id) }}">
                         <img src="data:image/png;base64, {{ $shoe->shoeImage }}" alt="shoe Image" class="max-w-full">
                         <a> {{ $shoe->shoeName }}</a>
                         <a>Size: EU{{ $shoe->shoeSize}}</a>
                         <a>Price: ${{ $shoe->shoePrice }}</a>
-                    </div>
-                </a>
+                    </a>
+                </div>
 
                 <div class="p-6 text-gray-900">
                     {{ __("") }}

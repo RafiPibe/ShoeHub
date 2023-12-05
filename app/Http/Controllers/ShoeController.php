@@ -105,4 +105,13 @@ class ShoeController extends Controller
 
         return redirect('/show');
     }
+
+    public function remove($id)
+    {
+        $shoe = Shoe::findOrFail($id);
+        $shoe->delete();
+
+        return redirect()->route('shoe.index')->with('status', 'Shoe removed successfully');
+    }
+
 }
