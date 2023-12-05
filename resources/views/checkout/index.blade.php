@@ -39,6 +39,7 @@
                     <div>
                         <x-input-label for="payment_method" :value="__('Payment Method')" />
                         <select id="payment_method" name="payment_method" class="block mt-1 w-full" onchange="showPaymentFields()">
+                            <option selected value="">-</option>
                             <option value="Dana">Dana</option>
                             <option value="Gopay">Gopay</option>
                             <option value="OVO">OVO</option>
