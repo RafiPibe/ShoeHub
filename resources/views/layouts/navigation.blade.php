@@ -22,17 +22,13 @@
                         </x-nav-link>
                     </div>
 
-                        {{-- <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
-                        <x-nav-link :href="route('outlet.index')" :active="request()->routeIs('outlet.index')">
-                            {{ __('Outlets') }}
+                    <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
+                        <x-nav-link :href="route('chat.index')" :active="request()->routeIs('chat.index')">
+                            {{ __('Chat') }}
                         </x-nav-link>
-                    </div> --}}
+                    </div>
 
                     <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
-                        {{-- <x-nav-link :href="route('shoe.index')" :active="request()->routeIs('shoe.index')">
-                            {{ __('Add Shoe') }}
-                        </x-nav-link> --}}
-
                         @if(auth()->user()->isAdmin)
                             <x-nav-link :href="route('shoe.index')" :active="request()->routeIs('shoe.index')">
                                 {{ __('Add Shoe') }}
