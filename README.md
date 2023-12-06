@@ -22,7 +22,7 @@ To do list:
 
 ✅ Item pricing
 
-- Admin / Customer Service chat (live broadcasting)
+- Admin / Customer Service chat (live broadcasting) [ONGOING]
 
 - Seeder for admin [isAdmin = 1]
 
