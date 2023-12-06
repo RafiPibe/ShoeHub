@@ -7,6 +7,7 @@ use App\Http\Controllers\UserCartController;
 use App\Http\Controllers\UserFavouriteController;
 use App\Http\Controllers\UserCheckoutController;
 use App\Http\Controllers\EmailSendingController;
+use App\Http\Controllers\PusherController;
 
 use Illuminate\Support\Facades\Route;
 
@@ -69,5 +70,17 @@ Route::delete('/userFav/{id}', [UserFavouriteController::class, 'remove'])->name
 
 Route::get('/checkout', [UserCheckoutController::class, 'showItems'])->name('checkout');
 Route::post('/checkout', [UserCheckoutController::class, 'processCheckout'])->name('checkout.process');Route::post('/send-email-on-continue', [EmailSendingController::class, 'sendEmailOnContinue'])->name('send-email-on-continue');
+
+// Route::get('/chat', [PusherController::class, 'index'])->name('chat');
+// Route::get('/broadcast', [PusherController::class, 'index'])->name('chat');
+// Route::get('/receive', [PusherController::class, 'index'])->name('chat');
+
+Route::get('/chat', [PusherController::class, 'index'])->name('chat.index');
+Route::post('/broadcast', [PusherController::class, 'broadcast'])->name('chat.broadcast');
+Route::post('/receive', [PusherController::class, 'receive'])->name('chat.receive');
+
+// Route::get('/chat', 'App\Http\Controllers\PusherController@index');
+// Route::get('/broadcast', 'App\Http\Controllers\PusherController@broadcast');
+// Route::get('/receive', 'App\Http\Controllers\PusherController@receive');
 
 require __DIR__.'/auth.php';
