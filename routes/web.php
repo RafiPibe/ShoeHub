@@ -69,7 +69,10 @@ Route::get('/favourites', [UserFavouriteController::class, 'showFav'])->name('fa
 Route::delete('/userFav/{id}', [UserFavouriteController::class, 'remove'])->name('userFav.remove');
 
 Route::get('/checkout', [UserCheckoutController::class, 'showItems'])->name('checkout');
-Route::post('/checkout', [UserCheckoutController::class, 'processCheckout'])->name('checkout.process');Route::post('/send-email-on-continue', [EmailSendingController::class, 'sendEmailOnContinue'])->name('send-email-on-continue');
+// Route::post('/checkout', [UserCheckoutController::class, 'processCheckout'])->name('checkout.process');
+// Route::post('/send-email-on-continue', [EmailSendingController::class, 'sendEmailOnContinue'])->name('send-email-on-continue');
+Route::post('/send-email', [EmailSendingController::class, 'sendEmailOnContinue'])->name('send.email');
+Route::post('/store-order-details', [UserCheckoutController::class, 'storeOrderDetails'])->name('store.order.details');
 
 // Route::get('/chat', [PusherController::class, 'index'])->name('chat');
 // Route::get('/broadcast', [PusherController::class, 'index'])->name('chat');

@@ -68,7 +68,7 @@
                     {{-- <x-primary-button type="submit" class="mt-4">
                         {{ __('Continue') }}
                     </x-primary-button> --}}
-                <form method="POST" action="{{ route('send-email-on-continue') }}">
+                <form method="POST" action="{{ route('send.email') }}">
                     @csrf
                     <x-primary-button type="submit" class="mt-4">
                         {{ __('Continue') }}

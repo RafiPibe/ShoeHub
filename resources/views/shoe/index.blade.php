@@ -80,7 +80,7 @@
                                     {{ __('Submit') }}
                                 </x-primary-button>
                             </div>
-                        </form>
+                    </form>
                 </div>
             </div>
         </div>
