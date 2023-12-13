@@ -22,10 +22,9 @@ class EventServiceProvider extends ServiceProvider
         \Illuminate\Auth\Events\Login::class => [
             \App\Listeners\LogSuccessfulLogin::class,
         ],
-
-        Login::class => [
-            LogSuccessfulLogin::class, // Correct namespace
-        ],
+        // Login::class => [
+        //     LogSuccessfulLogin::class,
+        // ],
     ];
 
     /**

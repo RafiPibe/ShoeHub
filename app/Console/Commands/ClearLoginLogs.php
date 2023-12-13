@@ -19,7 +19,7 @@ class ClearLoginLogs extends Command
      *
      * @var string
      */
-    protected $description = 'Clear user login logs older than 30 days';
+    protected $description = 'Clear user login logs';
 
     /**
      * Execute the console command.
@@ -32,7 +32,6 @@ class ClearLoginLogs extends Command
         // Check if the log file exists and is not empty
         if ($logs !== false && !empty($logs)) {
             File::put($logPath, '');
-
             $this->info('User login logs cleared successfully.');
         } else {
             $this->error('Failed to read the log file or the file is empty.');
