@@ -42,9 +42,9 @@
                 <!-- End Header -->
 
                 <!-- Chat -->
-                {{-- <div class="messages">
-                    @include('receive', ['message' => "Hi! How can I help you?"])
-                </div> --}}
+                <div class="messages">
+                    {{-- @include('receive', ['message' => "Hi! How can I help you?"]) --}}
+                </div>
                 <!-- End Chat -->
 
                 <!-- Footer -->
