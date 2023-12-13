@@ -43,7 +43,7 @@
 
                 <!-- Chat -->
                 <div class="messages">
-                    {{-- @include('receive', ['message' => "Hi! How can I help you?"]) --}}
+                    @include('receive', ['message' => "Hi! How can I help you?"])
                 </div>
                 <!-- End Chat -->
 
