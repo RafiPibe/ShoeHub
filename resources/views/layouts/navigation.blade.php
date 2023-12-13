@@ -23,7 +23,7 @@
                     </div>
 
                     <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
-                        <x-nav-link :href="route('chat.index')" :active="request()->routeIs('chat.index')">
+                        <x-nav-link :href="route('index')" :active="request()->routeIs('index')">
                             {{ __('Chat') }}
                         </x-nav-link>
                     </div>
