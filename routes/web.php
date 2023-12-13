@@ -78,12 +78,12 @@ Route::post('/store-order-details', [UserCheckoutController::class, 'storeOrderD
 // Route::get('/broadcast', [PusherController::class, 'index'])->name('chat');
 // Route::get('/receive', [PusherController::class, 'index'])->name('chat');
 
-Route::get('/chat', [PusherController::class, 'index'])->name('chat.index');
-Route::post('/broadcast', [PusherController::class, 'broadcast'])->name('chat.broadcast');
-Route::post('/receive', [PusherController::class, 'receive'])->name('chat.receive');
+Route::get('/chat', [PusherController::class, 'index'])->name('index');
+Route::post('/broadcast', [PusherController::class, 'broadcast'])->name('broadcast');
+Route::post('/receive', [PusherController::class, 'receive'])->name('receive');
 
 // Route::get('/chat', 'App\Http\Controllers\PusherController@index');
-// Route::get('/broadcast', 'App\Http\Controllers\PusherController@broadcast');
-// Route::get('/receive', 'App\Http\Controllers\PusherController@receive');
+// Route::post('/broadcast', 'App\Http\Controllers\PusherController@broadcast');
+// Route::post('/receive', 'App\Http\Controllers\PusherController@receive');
 
 require __DIR__.'/auth.php';
