@@ -13,8 +13,11 @@ class ShoeFactory extends Factory
     {
         return [
             'shoeName' => $this->faker->word,
-            'shoeSize' => $this->faker->numberBetween(30, 50),
-            'shoeImage' => $this->faker->text,
+            'shoeSize' => $this->faker->randomElement(['30', '31', '32', '33', '34', '35', '36', '37', '38', '39', '40', '41', '42', '43', '44', '45', '46', '47', '48', '49', '50']),
+            'shoePrice' => $this->faker->randomFloat(2, 10, 100),
+            'outletId' => null,
+            'shoeImage' => base64_encode($this->faker->image('public/storage', 400, 300, null, false)),
+            'shoeDescription' => $this->faker->sentence,
         ];
     }
 }

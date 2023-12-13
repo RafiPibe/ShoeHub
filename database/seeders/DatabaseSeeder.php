@@ -5,6 +5,7 @@ namespace Database\Seeders;
 use Illuminate\Database\Seeder;
 use App\Models\User;
 use Illuminate\Support\Facades\Hash;
+use App\Models\Shoe;
 
 class DatabaseSeeder extends Seeder
 {
@@ -20,5 +21,7 @@ class DatabaseSeeder extends Seeder
             'password' => Hash::make('admin123'),
             'isAdmin' => 1,
         ]);
+
+        Shoe::factory()->count(10)->create();
     }
 }
