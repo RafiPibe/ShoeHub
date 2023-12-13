@@ -28,3 +28,12 @@ To do list:
 
 - Home / welcome page
 ```
+<p>How to add chat</p>
+
+- go to https://dashboard.pusher.com
+- make an account
+- make a channel and name it anything (preferably "ShoeHub") and pick ap1 (southeast-Asia)
+- Click the channel and go to "App keys"
+- in there you can find the key for the chat feature.
+- copy the key into the corresponding stuff in the env
+- yippee now you can use the chat feature
