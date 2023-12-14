@@ -6,6 +6,10 @@
 |Pascal Roger Junior Tauran   | 5025211072 |
 |Faraihan Rafi Adityawarman   | 5025211074 |
 
+## VIDEO
+
+![ourvideo](https://youtu.be/_3lLdcdJXpk)
+
 <p>We revised our project and implement Laravel Breeze instead of bareboning Laravel</p>
 
 <p>Our Previous Work:</p>
@@ -22,11 +26,11 @@ To do list:
 
 ✅ Item pricing
 
-- Admin / Customer Service chat (live broadcasting) [ONGOING]
+✅ Admin / Customer Service chat (live broadcasting) [ONGOING]
 
-- Seeder for admin [isAdmin = 1]
+✅ Seeder for admin [isAdmin = 1]
 
-- Home / welcome page
+✅ Home / welcome page
 ```
 <p>How to add chat</p>
 
@@ -37,3 +41,14 @@ To do list:
 - in there you can find the key for the chat feature.
 - copy the key into the corresponding stuff in the env
 - yippee now you can use the chat feature
+
+<p>How to add mailing</p>
+- Make a maitrap account
+- Open settings in the mailtrap website and go to `SMPT settings`
+- Click `show credentials` and copy the `host`, `port`, `username` and `password` over to the `.env` file
+- Congrats mailing should now work
+
+<p>User login logs</p>
+- The user login logs are stored in `storage/logs/login.log`
+- You can view them by running the command `storage/logs/login.log` in the terminal
+- The logs would be cleared weekly but you can manually clear the logs with `php artisan log:clear`
