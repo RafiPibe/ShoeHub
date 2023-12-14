@@ -43,12 +43,14 @@ To do list:
 - yippee now you can use the chat feature
 
 <p>How to add mailing</p>
+
 - Make a maitrap account
 - Open settings in the mailtrap website and go to `SMPT settings`
 - Click `show credentials` and copy the `host`, `port`, `username` and `password` over to the `.env` file
 - Congrats mailing should now work
 
 <p>User login logs</p>
+
 - The user login logs are stored in `storage/logs/login.log`
 - You can view them by running the command `storage/logs/login.log` in the terminal
 - The logs would be cleared weekly but you can manually clear the logs with `php artisan log:clear`
