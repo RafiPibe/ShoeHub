@@ -52,5 +52,5 @@ To do list:
 <p>User login logs</p>
 
 - The user login logs are stored in `storage/logs/login.log`
-- You can view them by running the command `storage/logs/login.log` in the terminal
+- You can view them by running the command `cat storage/logs/login.log` in the terminal
 - The logs would be cleared weekly but you can manually clear the logs with `php artisan log:clear`
