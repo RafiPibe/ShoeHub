@@ -8,7 +8,7 @@
 
 ## VIDEO
 
-![ourvideo](https://youtu.be/_3lLdcdJXpk)
+[Our video](https://youtu.be/_3lLdcdJXpk)
 
 <p>We revised our project and implement Laravel Breeze instead of bareboning Laravel</p>
 
